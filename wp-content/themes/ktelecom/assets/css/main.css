@@ -1,0 +1,212 @@
+.header-wrapper {
+    width: 1000px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    position: relative;
+    width: 147px;
+    height: 36px;
+    top: 22px;
+    left: 50px;
+}
+
+.tariffs-post {
+    width: 1000px;
+    height: 450px;
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.post-text {
+    position: relative;
+    top: 165px;
+    left: 50px;
+    height: 198px;
+    width: 500px;
+}
+
+.btn-more {
+    position: relative;
+    display: flex;
+    width: 203px;
+    height: 45px;
+    top: 100px;
+    left: 50px;
+    border-radius: 5px;
+    padding: 15px 80px 15px 80px;
+    gap: 10px;
+    background: #C81059;
+}
+/*Подключение owl */
+.tariffs {
+    text-align: center;
+    padding: 20px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.info-slide {
+    left: 30px;
+}
+.tariff-tittle {
+    left: 45px;
+}
+
+.tariffs h1 {
+    margin-bottom: 20px;
+}
+
+.tariffs .slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.tariffs .slide {
+    background: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tariffs .slide h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tariffs .slide h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.tariffs .slide h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #ff4500;
+}
+
+.tariffs .slide p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.tariffs .slide > div {
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tariffs .slide > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tariffs .slide .price {
+    font-size: 22px;
+    color: #ff4500;
+}
+
+/* Контактная форма */
+.contact-form {
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form__title {
+    margin-bottom: 20px;
+}
+
+.contact-form__group {
+    margin-bottom: 15px;
+}
+
+.contact-form__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form__input,
+.contact-form__input-radio,
+.contact-form__input-checkbox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.contact-form__input-checkbox {
+    width: auto;
+}
+
+.contact-form__submit {
+    padding: 10px 20px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.contact-form__submit:hover {
+    background: #005a87;
+}
+
+/*Футор*/
+.footer {
+    width: 1000px;
+    margin: 0 auto;
+    height: 97px;
+    justify-items: center;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+}
+
+.footer__block {
+    display: flex;
+}
+
+.footer__logo {
+    margin-right: auto;
+}
+
+.footer__text {
+    margin-left: 50px;
+    color: #C2C2C2;
+}
+
+.footer__social-icons {
+    margin-left: auto;
+}
+
+.footer__social {
+
+}
+
+.footer__social-icons img {
+    width: 40px;
+    margin-left: 10px;
+}
