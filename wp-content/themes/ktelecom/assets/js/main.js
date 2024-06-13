@@ -1,9 +1,10 @@
+//Скрипт слайдера
 jQuery(document).ready(function($) {
-    var $slider = $('.tariffs__slider'); // Сохраняем ссылку на слайдер
+    var $slider = $('.tariffs__slider');
 
     function initSlider() {
         var windowWidth = $(window).width();
-        var items = 1; // По умолчанию настройки для экранов менее 600px
+        var items = 1;
 
         if (windowWidth >= 600 && windowWidth < 1000) {
             items = 2;
@@ -13,7 +14,7 @@ jQuery(document).ready(function($) {
 
         // Проверяем инициализирован ли уже слайдер
         if ($slider.hasClass('owl-loaded')) {
-            $slider.trigger('destroy.owl.carousel'); // Уничтожаем слайдер
+            $slider.trigger('destroy.owl.carousel');
         }
 
         $slider.owlCarousel({
@@ -37,10 +38,8 @@ jQuery(document).ready(function($) {
         });
     }
 
-    // Инициализация слайдера при загрузке страницы
     initSlider();
 
-    // Переинициализация слайдера при изменении размеров окна с небольшой задержкой для улучшения производительности
     var resizeTimer;
     $(window).resize(function() {
         clearTimeout(resizeTimer);
@@ -49,6 +48,7 @@ jQuery(document).ready(function($) {
         }, 250);
     });
 });
+//Просто апострофы
 document.addEventListener("DOMContentLoaded", function() {
     const description = document.getElementById('tariffs-description');
     if (description) {

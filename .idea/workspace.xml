@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e651738-5922-4bdb-8da7-1f2b33c1f11b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/fonts/TypeMates - CeraRoundPro-Black.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/fonts/TypeMates - CeraRoundPro-Bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/fonts/TypeMates - CeraRoundPro-Light.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/fonts/TypeMates - CeraRoundPro-Medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/fonts/TypeMates - CeraRoundPro-Regular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/fonts/TypeMates - CeraRoundPro-Thin.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/images/main pic.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/ktelecom/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/ktelecom/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/ktelecom/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/ktelecom/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/ktelecom/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +91,8 @@
       <workItem from="1718148221523" duration="1861000" />
       <workItem from="1718159413197" duration="6491000" />
       <workItem from="1718202283930" duration="2367000" />
-      <workItem from="1718209947084" duration="42917000" />
+      <workItem from="1718209947084" duration="44399000" />
+      <workItem from="1718291159735" duration="5781000" />
     </task>
     <servers />
   </component>

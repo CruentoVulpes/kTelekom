@@ -63,7 +63,7 @@
                         <p class="tariffs__monthly open-sans-regular">в месяц</p>
                     </div>
                     <p class="tariffs__note open-sans-regular">*итоговая цена зависит от варианта оплаты и пакета ТВ при необходимости</p>
-                    <button class="tariffs__button cera-medium">Выбрать тариф</button>
+                    <button class="tariffs__button active__button cera-medium">Тариф выбран</button>
                 </div>
             </div>
             <div class="tariffs__slide">

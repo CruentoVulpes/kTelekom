@@ -1,19 +1,19 @@
 <?php
 function ktelekom_assets() {
-    // Подключаем основной CSS файл темы
+    // Подключаем CSS файл темы
     wp_enqueue_style('maincss', get_template_directory_uri() . '/assets/css/main.css' );
 
     // Подключаем файлы Owl Carousel
     wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/assets/css/owl.carousel.min.css' );
     wp_enqueue_style('owl-theme', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css' );
 
-    // Подключаем jQuery (если не подключен)
+    // Подключаем jQuery
     wp_enqueue_script('jquery');
 
-    // Подключаем JS файл Owl Carousel
+    // Подключаем JS Owl Carousel
     wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), null, true );
 
-    // Подключаем основной JS файл темы
+    // Подключаем JS файл темы
     wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery', 'owl-carousel'), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'ktelekom_assets' );
