@@ -1,10 +1,96 @@
-.header-wrapper {
+/* Подключение шрифта */
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url('../fonts/TypeMates - CeraRoundPro-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url('../fonts/TypeMates - CeraRoundPro-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url('../fonts/TypeMates - CeraRoundPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url('../fonts/TypeMates - CeraRoundPro-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url('../fonts/TypeMates - CeraRoundPro-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url('../fonts/TypeMates - CeraRoundPro-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*Стили шрифтов*/
+.cera-thin {
+    font-family: 'CeraRoundPro', sans-serif;
+    font-weight: 100;
+}
+
+.cera-light {
+    font-family: 'CeraRoundPro', sans-serif;
+    font-weight: 300;
+}
+
+.cera-regular {
+    font-family: 'CeraRoundPro', sans-serif;
+    font-weight: 400;
+}
+
+.cera-medium {
+    font-family: 'CeraRoundPro', sans-serif;
+    font-weight: 500;
+}
+
+.cera-bold {
+    font-family: 'CeraRoundPro', sans-serif;
+    font-weight: 700;
+}
+
+.cera-black {
+    font-family: 'CeraRoundPro', sans-serif;
+    font-weight: 900;
+}
+/* open-sans */
+.open-sans-regular {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+body {
     width: 1000px;
+    margin: 0 auto;
+}
+
+/* Хедер */
+.header-wrapper {
     height: 80px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .header-logo {
@@ -14,14 +100,14 @@
     top: 22px;
     left: 50px;
 }
-
+/*Пост на главной*/
 .tariffs-post {
-    width: 1000px;
     height: 450px;
     align-content: center;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    background: #F2F6F8;
 }
 
 .post-text {
@@ -32,8 +118,26 @@
     width: 500px;
 }
 
-.btn-more {
-    position: relative;
+.tariffs-post__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    width: 435px;
+    font-weight: 700;
+}
+
+.tariffs-post__description {
+    color: #555555;
+    line-height: 32px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.tariffs-post__description .dot {
+    color: #555555;
+
+}
+
+.tariffs-post__button {
     display: flex;
     width: 203px;
     height: 45px;
@@ -43,95 +147,243 @@
     padding: 15px 80px 15px 80px;
     gap: 10px;
     background: #C81059;
-}
-/*Подключение owl */
-.tariffs {
-    text-align: center;
-    padding: 20px;
-    width: 1000px;
-    margin: 0 auto;
-}
-.info-slide {
-    left: 30px;
-}
-.tariff-tittle {
-    left: 45px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
-.tariffs h1 {
+.tariffs-post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 350px;
+    margin-bottom: 30px;
+    padding: 50px;
+}
+
+.tariffs-post__info {
+    flex: 1;
+}
+
+.tariffs-post__text {
     margin-bottom: 20px;
 }
 
-.tariffs .slider {
+
+.tariffs-post__button:hover {
+    background-color: #0056b3;
+}
+
+.tariffs-post__image-wrapper {
+    flex: 1;
+}
+
+.tariffs-post__image {
+    max-width: 100%;
+    height: auto;
+}
+/* Подключение стилей owl */
+
+.tariff-hidden {
+    display: none;
+}
+
+.owl-nav {
+    display: none;
+}
+
+/* Главные стили для секции owl*/
+.tariffs {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 45px 0 45px;
+    margin: 0 auto;
+}
+
+.tariffs__title {
+    font-size: 28px;
+    text-align: center;
+    display: flex;
+    margin: 50px 0 33px 45px;
+    line-height: 42px;
+    color: #2D2D2D;
+}
+
+.tariffs__slider {
+    width: 100%;
+}
+
+.tariffs__slide {
+    box-sizing: border-box; /* Добавляем box-sizing для корректного учета padding и border */
+    padding: 20px;
+    height: auto; /* Убираем фиксированную высоту */
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.tariffs__name,
+.tariffs__speed,
+.tariffs__rate,
+.tariffs__description,
+.tariffs__price,
+.tariffs__monthly,
+.tariffs__note {
+    margin: 10px 0;
+}
+
+.tariffs__info {
+    text-align: left;
+    flex-grow: 1;
     overflow: hidden;
 }
 
-.tariffs .slide {
-    background: #f4f4f4;
-    padding: 20px;
-    border: 1px solid #ddd;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 0 auto;
-    width: 100%;
-    box-sizing: border-box;
+.tariffs__name {
+    font-size: 20px;
+    line-height: 30px;
 }
 
-.tariffs .slide h4 {
-    font-size: 18px;
+.tariffs__speed {
+    font-size: 14px;
+    color: #ACACAC;
+}
+
+.tariffs__rate {
+    font-size: 25px;
+    line-height: 37px;
+    color: #C81059;
+    width: 100%; /* Убираем фиксированную ширину */
+    height: auto; /* Убираем фиксированную высоту */
+}
+
+.tariffs__description {
+    font-size: 13px;
+    width: 100%; /* Убираем фиксированную ширину */
+    height: auto; /* Убираем фиксированную высоту */
+}
+
+.tariffs__options {
+    margin-bottom: 15px;
+}
+
+.tariffs__option {
+    display: flex;
     margin-bottom: 10px;
 }
 
-.tariffs .slide h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.tariffs .slide h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #ff4500;
-}
-
-.tariffs .slide p {
-    margin: 5px 0;
+.tariffs__label {
     font-size: 14px;
 }
 
-.tariffs .slide > div {
-    margin: 10px 0;
-    padding: 10px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.tariffs__package {
+    font-size: 12px;
+    color: #888;
 }
 
-.tariffs .slide > div > div {
+.tariffs__price-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.tariffs .slide .price {
-    font-size: 22px;
-    color: #ff4500;
+.tariffs__price {
+    font-size: 40px;
+    color: #2D2D2D;
+}
+
+.tariffs__monthly {
+    font-size: 16px;
+    color: #55555580;
+    line-height: 24px;
+}
+
+.tariffs__note {
+    font-size: 12px;
+    color: #55555580;
+    width: 100%; /* Убираем фиксированную ширину */
+    height: auto; /* Убираем фиксированную высоту */
+}
+
+.tariffs__button {
+    width: 100%; /* Убираем фиксированную ширину */
+    height: 45px;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 5px;
+    opacity: 1;
+    background-color: #0099C8;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tariffs__button:hover {
+    background-color: #007B9F;
+}
+
+.tariffs__checkbox {
+    width: 23px;
+    height: 23px;
 }
 
 /* Контактная форма */
+.container::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #2D2D2D1A;
+    margin-bottom: 20px;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #2D2D2D1A;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
 .contact-form {
-    padding: 20px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    max-width: 600px;
-    margin: 0 auto;
+    width: 900px;
+    height: 341px;
+    padding: 40px 0 0 50px;
+    margin: 0 50px 40px 50px;
+    background: rgba(242, 246, 248, 1);
+    border-radius: 10px;
+    font-family: 'CeraRoundPro', sans-serif;
+}
+
+.contact-form__flex-container {
+    display: flex;
+    gap: 10px; /* Промежуток между элементами */
+    justify-content: space-between; /* Равное распределение элементов */
+}
+
+.contact-form__flex-item {
+    flex-grow: 1; /* Элементы займут равную ширину */
+}
+
+.contact-form__item-name .contact-form__input {
+    width: 183px; /* Ширина для поля имени */
+    height: 45px; /* Фиксированная высота */
+}
+
+.contact-form__item-phone .contact-form__input {
+    width: 352px; /* Ширина для поля номера телефона */
+    height: 45px; /* Фиксированная высота */
 }
 
 .contact-form__title {
     margin-bottom: 20px;
+    font-family: 'CeraRoundPro', sans-serif;
+    font-weight: 500;
 }
 
 .contact-form__group {
@@ -150,9 +402,11 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
     border-radius: 3px;
     box-sizing: border-box;
+    font-family: 'CeraRoundPro', sans-serif;
+    font-weight: 400;
+    border: none; /* Убираем границу */
 }
 
 .contact-form__input-checkbox {
@@ -160,23 +414,67 @@
 }
 
 .contact-form__submit {
-    padding: 10px 20px;
-    background: #0073aa;
+    width: 202px;
+    height: 45px;
+    background: rgba(200, 16, 89, 1);
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
+    font-family: 'CeraRoundPro', sans-serif;
+    font-weight: 500;
 }
 
 .contact-form__submit:hover {
     background: #005a87;
 }
 
+::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background: white;
+    border-radius: unset;
+    width: 183px;
+    height: 45px;
+}
+
+.radio-button {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.radio-button input[type="radio"] {
+    display: none; /* Скрыть стандартную радиокнопку */
+}
+
+.radio-button label {
+    display: inline-block;
+    width: 125px;
+    padding: 10px 20px;
+    border: 1px solid #2D2D2D1A;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* добавлен переход для border-color и цвета текста */
+    color: #2D2D2D; /* Цвет текста по умолчанию */
+}
+
+.radio-button label:hover {
+    border-color: #0099C8;
+    color: #0099C8;
+}
+
+.radio-button input[type="radio"]:checked + label {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa; /* изменение цвета рамки при выборе */
+}
+
+
 /*Футор*/
+
 .footer {
-    width: 1000px;
     margin: 0 auto;
-    height: 97px;
+    height: 100px;
     justify-items: center;
 }
 
@@ -187,6 +485,7 @@
 
 .footer__block {
     display: flex;
+    align-items: center;
 }
 
 .footer__logo {
@@ -207,6 +506,963 @@
 }
 
 .footer__social-icons img {
-    width: 40px;
+    width: 30px;
     margin-left: 10px;
+}
+
+
+/*Мобильная верстка*/
+@media (max-width: 480px) {
+    body {
+        max-width: 320px ;
+        margin: 0 auto;
+    }
+    .tariffs__slider {
+        /* Пример стилей для слайдера на мобильных устройствах */
+        margin: 0;
+    }
+
+    /* Все остальные стили для мобильных устройств */
+    .header-wrapper {
+        height: 80px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        position: relative;
+        width: 147px;
+        height: 36px;
+        top: 22px;
+        left: 5px;
+    }
+
+    /*Пост на главной*/
+    .tariffs-post {
+        height: 450px;
+        align-content: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        background: #F2F6F8;
+        flex-direction: column-reverse;
+    }
+
+    .post-text {
+        position: relative;
+        top: 243px;
+        height: 172px;
+        width: 300px;
+        left: 10px;
+    }
+
+    .tariffs-post__title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        width: 300px;
+    }
+
+    .tariffs-post__description {
+        width: 300px;
+        color: #555555;
+        line-height: 26px;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .tariffs-post__description .dot {
+        color: #555555;
+
+    }
+
+    .tariffs-post__button {
+        display: flex;
+        width: 300px;
+        height: 40px;
+        left: 14px;
+        border-radius: 5px;
+        padding: 15px 80px 15px 80px;
+        gap: 10px;
+        background: #C81059;
+        color: white;
+        border: none;
+        cursor: pointer;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .tariffs-post__info {
+        flex: 1;
+    }
+
+    .tariffs-post__text {
+        margin-bottom: 20px;
+    }
+
+    .tariffs-post__button:hover {
+        background-color: #0056b3;
+    }
+
+    .tariffs-post__image-wrapper {
+        flex: 1;
+    }
+
+    .tariffs-post__image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Подключение стилей owl */
+    .tariff-hidden {
+        display: none;
+    }
+
+    .owl-nav {
+        display: none;
+    }
+    .owl-carousel .owl-item {
+        display: inline-block;
+        width: 100%;
+    }
+
+    /* Главные стили для секции owl*/
+    .tariffs {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0 10px 0 10px;
+        margin: 0 auto;
+    }
+
+    .tariffs__title {
+        font-size: 18px;
+        text-align: center;
+        display: flex;
+        margin: 40px 0 30px 10px;
+        line-height: 27px;
+        color: #2D2D2D;
+    }
+
+    .tariffs__slider {
+        width: 100%;
+    }
+
+    .tariffs__slide {
+        width: 204px;
+        box-sizing: border-box; /* Добавляем box-sizing для корректного учета padding и border */
+        padding: 20px;
+        height: auto; /* Убираем фиксированную высоту */
+        border-radius: 5px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .tariffs__name,
+    .tariffs__speed,
+    .tariffs__rate,
+    .tariffs__description,
+    .tariffs__price,
+    .tariffs__monthly,
+    .tariffs__note {
+        margin: 10px 0;
+    }
+
+    .tariffs__info {
+        text-align: left;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+
+    .tariffs__name {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .tariffs__speed {
+        font-size: 10px;
+        line-height: 15px;
+        color: #ACACAC;
+    }
+
+    .tariffs__rate {
+        font-size: 18px;
+        line-height: 27px;
+        color: #C81059;
+        width: 121px;
+        height: 27px;
+    }
+
+    .tariffs__description {
+        font-size: 12px;
+        width: 174px;
+        height: 90px;
+    }
+
+    .tariffs__options {
+        margin-bottom: 15px;
+    }
+
+    .tariffs__option {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .tariffs__label {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .tariffs__package {
+        font-size: 12px;
+        line-height: 18px;
+        color: #888;
+    }
+
+    .tariffs__price-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .tariffs__price {
+        font-size: 25px;
+        line-height: 37px;
+        color: #2D2D2D;
+    }
+
+    .tariffs__monthly {
+        font-size: 14px;
+        color: #55555580;
+        line-height: 21px;
+    }
+
+    .tariffs__note {
+        font-size: 10px;
+        color: #55555580;
+        width: 174px;
+        height: 52px;
+    }
+
+    .tariffs__button {
+        width: 150px;
+        height: 40px;
+        padding: 0;
+        gap: 10px;
+        border-radius: 5px;
+        opacity: 1;
+        background-color: #0099C8;
+        color: #ffffff;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .tariffs__button:hover {
+        background-color: #007B9F;
+    }
+
+    .tariffs__checkbox {
+        width: 23px;
+        height: 23px;
+    }
+
+    /* Контактная форма */
+    .container::before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #2D2D2D1A;
+        margin-bottom: 20px;
+    }
+
+    .container::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #2D2D2D1A;
+        margin-top: 20px;
+        margin-bottom: 20px; /* Отступ снизу */
+    }
+
+    .contact-form {
+        width: 320px;
+        height: 339px;
+        margin: 0;
+        padding: 10px;
+        background: rgba(242, 246, 248, 1);
+        border-radius: 10px;
+        font-family: 'CeraRoundPro', sans-serif;
+    }
+
+    .contact-form__flex-container {
+        display: grid;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .contact-form__flex-item {
+        flex-grow: 1;
+    }
+
+    .contact-form__item-name .contact-form__input {
+        width: 300px;
+        height: 40px;
+        border-radius: 2px
+    }
+
+    p {
+        margin: 0 auto;
+    }
+
+    .contact-form__item-phone .contact-form__input {
+        width: 300px;
+        height: 40px;
+        border-radius: 2px
+    }
+
+    .contact-form__title {
+        margin-bottom: 20px;
+        font-family: 'CeraRoundPro', sans-serif;
+        font-weight: 500;
+    }
+
+    .contact-form__group {
+        margin-bottom: 15px;
+    }
+
+    .contact-form__label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .contact-form__input,
+    .contact-form__input-radio,
+    .contact-form__input-checkbox {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        font-family: 'CeraRoundPro', sans-serif;
+        font-weight: 400;
+        border: none;
+    }
+
+    .contact-form__input-checkbox {
+        width: auto;
+    }
+
+    .contact-form__submit {
+        width: 300px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 18px;
+        background: rgba(200, 16, 89, 1);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'CeraRoundPro', sans-serif;
+        font-weight: 500;
+    }
+
+    .contact-form__submit:hover {
+        background: #005a87;
+    }
+
+    ::placeholder {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        background: white;
+        border-radius: unset;
+        width: 300px;
+        height: 40px;
+    }
+
+    .contact-form__row {
+        display: none; /* Скрываем строку с чекбоксом на мобильных устройствах */
+    }
+
+    .agree-text {
+        display: none; /* Скрываем текст согласия */
+    }
+
+    .agree-link-text {
+        text-decoration: underline; /* Добавляем подчеркивание */
+        color: #989898;
+        font-size: 12px;
+        line-height: 18px;
+
+    }
+
+    .agree-link {
+        display: block;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: -30px;
+    }
+
+    .radio-button {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .radio-button input[type="radio"] {
+        display: none;
+    }
+
+    .all-radio__buttons {
+        display: flex;
+    }
+
+    .radio-button label {
+        margin-bottom: 20px;
+        font-size: 10px;
+        display: inline-block;
+        width: max-content;
+        padding: 0;
+        border: 1px solid #2D2D2D1A;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* добавлен переход для border-color и цвета текста */
+        color: #2D2D2D; /* Цвет текста по умолчанию */
+    }
+
+    .radio-button label:hover {
+        border-color: #0099C8;
+        color: #0099C8;
+    }
+
+    .radio-button input[type="radio"]:checked + label {
+        background-color: #0073aa;
+        color: #fff;
+        border-color: #0073aa; /* изменение цвета рамки при выборе */
+    }
+
+
+    /*Футор*/
+    .footer {
+        margin: 0 auto;
+        height: 114px;
+        justify-items: center;
+    }
+
+    .footer__content {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .footer__block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .footer__logo {
+        margin-right: auto;
+    }
+
+    .footer__text {
+        font-size: 12px;
+        line-height: 18px;
+        color: #C2C2C2;
+        margin-left: unset;
+        margin-top: 10px;
+    }
+
+    .footer__social-icons {
+        margin-left: auto;
+    }
+
+    .footer__social {
+
+    }
+
+    .footer__social-icons img {
+        width: 25px;
+    }
+}
+
+@media only screen and (min-width: 481px) and  (max-width: 820px) {
+    body {
+        max-width: 720px ;
+        margin: 0 auto;
+    }
+    .tariffs__slider {
+        margin: 0;
+    }
+
+    /* Все остальные стили для мобильных устройств */
+    .header-wrapper {
+        height: 80px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        position: relative;
+        width: 147px;
+        height: 36px;
+        top: 22px;
+        left: 50px;
+    }
+
+    /*Пост на главной*/
+    .tariffs-post {
+        width: 500px;
+        height: 500px;
+        align-content: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        background: #F2F6F8;
+        flex-direction: column-reverse;
+    }
+
+    .post-text {
+        position: relative;
+        top: 242px;
+        height: 172px;
+        width: 300px;
+        left: 10px;
+    }
+
+    .tariffs-post__title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        width: 400px;
+    }
+
+    .tariffs-post__description {
+        width: 400px;
+        color: #555555;
+        line-height: 26px;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .tariffs-post__description .dot {
+        color: #555555;
+
+    }
+
+    .tariffs-post__button {
+        display: flex;
+        width: 400px;
+        height: 50px;
+        left: 15px;
+        border-radius: 5px;
+        padding: 15px 80px 15px 80px;
+        gap: 10px;
+        background: #C81059;
+        color: white;
+        border: none;
+        cursor: pointer;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .tariffs-post__info {
+        flex: 1;
+    }
+
+    .tariffs-post__text {
+        margin-bottom: 20px;
+    }
+
+    .tariffs-post__button:hover {
+        background-color: #0056b3;
+    }
+
+    .tariffs-post__image-wrapper {
+        flex: 1;
+    }
+
+    .tariffs-post__image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Подключение стилей owl */
+    .tariff-hidden {
+        display: none;
+    }
+
+    .owl-nav {
+        display: none;
+    }
+    .owl-carousel .owl-item {
+        display: inline-block;
+        width: 100%;
+    }
+
+    /* Главные стили для секции owl*/
+    .tariffs {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0 10px 0 10px;
+        margin: 0 auto;
+    }
+
+    .tariffs__title {
+        font-size: 22px;
+        text-align: center;
+        display: flex;
+        margin: 40px 0 30px 75px;
+        line-height: 27px;
+        color: #2D2D2D;
+    }
+
+    .tariffs__slider {
+        width: 100%;
+    }
+
+    .tariffs__slide {
+        width: 204px;
+        box-sizing: border-box; /* Добавляем box-sizing для корректного учета padding и border */
+        padding: 20px;
+        height: auto; /* Убираем фиксированную высоту */
+        border-radius: 5px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .tariffs__name,
+    .tariffs__speed,
+    .tariffs__rate,
+    .tariffs__description,
+    .tariffs__price,
+    .tariffs__monthly,
+    .tariffs__note {
+        margin: 10px 0;
+    }
+
+    .tariffs__info {
+        text-align: left;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+
+    .tariffs__name {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .tariffs__speed {
+        font-size: 10px;
+        line-height: 15px;
+        color: #ACACAC;
+    }
+
+    .tariffs__rate {
+        font-size: 18px;
+        line-height: 27px;
+        color: #C81059;
+        width: 121px;
+        height: 27px;
+    }
+
+    .tariffs__description {
+        font-size: 12px;
+        width: 174px;
+        height: 90px;
+    }
+
+    .tariffs__options {
+        margin-bottom: 15px;
+    }
+
+    .tariffs__option {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .tariffs__label {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .tariffs__package {
+        font-size: 12px;
+        line-height: 18px;
+        color: #888;
+    }
+
+    .tariffs__price-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .tariffs__price {
+        font-size: 25px;
+        line-height: 37px;
+        color: #2D2D2D;
+    }
+
+    .tariffs__monthly {
+        font-size: 14px;
+        color: #55555580;
+        line-height: 21px;
+    }
+
+    .tariffs__note {
+        font-size: 10px;
+        color: #55555580;
+        width: 174px;
+        height: 52px;
+    }
+
+    .tariffs__button {
+        width: 150px;
+        height: 40px;
+        padding: 0;
+        gap: 10px;
+        border-radius: 5px;
+        opacity: 1;
+        background-color: #0099C8;
+        color: #ffffff;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .tariffs__button:hover {
+        background-color: #007B9F;
+    }
+
+    .tariffs__checkbox {
+        width: 23px;
+        height: 23px;
+    }
+
+    /* Контактная форма */
+    .container::before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #2D2D2D1A;
+        margin-bottom: 20px;
+    }
+
+    .container::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #2D2D2D1A;
+        margin-top: 20px;
+        margin-bottom: 20px; /* Отступ снизу */
+    }
+
+    .contact-form {
+        width: 600px;
+        height: 250px;
+        margin: 0 auto;
+        padding: 10px;
+        background: rgba(242, 246, 248, 1);
+        border-radius: 10px;
+        font-family: 'CeraRoundPro', sans-serif;
+    }
+
+    .contact-form__flex-container {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .contact-form__flex-item {
+        flex-grow: 1;
+    }
+
+    .contact-form__item-name .contact-form__input {
+        width: 200px;
+        height: 50px;
+        border-radius: 2px
+    }
+
+    p {
+        margin: 0 auto;
+    }
+
+    .contact-form__item-phone .contact-form__input {
+        width: 200px;
+        height: 50px;
+        border-radius: 2px
+    }
+
+    .contact-form__title {
+        margin-bottom: 24px;
+        font-family: 'CeraRoundPro', sans-serif;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-form__group {
+        margin-bottom: 15px;
+    }
+
+    .contact-form__label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .contact-form__input,
+    .contact-form__input-radio,
+    .contact-form__input-checkbox {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        font-family: 'CeraRoundPro', sans-serif;
+        font-weight: 400;
+        border: none;
+    }
+
+    .contact-form__input-checkbox {
+        width: auto;
+    }
+
+    .contact-form__submit {
+        width: 150px;
+        height: 50px;
+        font-size: 12px;
+        line-height: 18px;
+        background: rgba(200, 16, 89, 1);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'CeraRoundPro', sans-serif;
+        font-weight: 500;
+    }
+
+    .contact-form__submit:hover {
+        background: #005a87;
+    }
+
+    ::placeholder {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        background: white;
+        border-radius: unset;
+        width: 400px;
+        height: 50px;
+    }
+
+    .contact-form__row {
+        display: none; /* Скрываем строку с чекбоксом на мобильных устройствах */
+    }
+
+    .agree-text {
+        display: none; /* Скрываем текст согласия */
+    }
+
+    .agree-link-text {
+        text-decoration: underline; /* Добавляем подчеркивание */
+        color: #989898;
+        font-size: 15px;
+        line-height: 18px;
+
+    }
+
+    .agree-link {
+        display: block;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: -30px;
+    }
+
+    .radio-button {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .radio-button input[type="radio"] {
+        display: none;
+    }
+
+    .all-radio__buttons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .radio-button label {
+        margin-bottom: 20px;
+        font-size: 18px;
+        display: inline-block;
+        width: max-content;
+        padding: 5px;
+        border: 1px solid #2D2D2D1A;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* добавлен переход для border-color и цвета текста */
+        color: #2D2D2D; /* Цвет текста по умолчанию */
+    }
+
+    .radio-button label:hover {
+        border-color: #0099C8;
+        color: #0099C8;
+    }
+
+    .radio-button input[type="radio"]:checked + label {
+        background-color: #0073aa;
+        color: #fff;
+        border-color: #0073aa; /* изменение цвета рамки при выборе */
+    }
+
+
+    /*Футор*/
+    .footer {
+        margin: 0 auto;
+        height: 114px;
+        justify-items: center;
+    }
+
+    .footer__content {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .footer__block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .footer__logo {
+        margin-right: auto;
+    }
+
+    .footer__text {
+        font-size: 12px;
+        line-height: 18px;
+        color: #C2C2C2;
+        margin-left: unset;
+        margin-top: 10px;
+    }
+
+    .footer__social-icons {
+        margin-left: auto;
+    }
+
+    .footer__social {
+
+    }
+
+    .footer__social-icons img {
+        width: 25px;
+    }
 }

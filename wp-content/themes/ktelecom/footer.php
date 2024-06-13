@@ -5,7 +5,7 @@
                 <div class="footer__logo">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/left.png" alt="Логотип">
                 </div>
-                <div class="footer__text">
+                <div class="footer__text cera-regular">
                     <p>© 2018–2022 ООО «К-Телеком»</p>
                 </div>
             </div>
